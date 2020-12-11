@@ -5,9 +5,9 @@ function Product({info, basket, setBasket, total, setTotal}) {
 
     return (
         <div>
-            <h3>{info.name}</h3>
+            <h3>{info.productname}</h3>
 
-            <p>£{info.price}</p>
+            <p>£{info.productprice}</p>
 
             <button
                 onClick={() => {

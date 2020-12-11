@@ -1,5 +1,7 @@
 import React from 'react';
 import Product from './Product';
+//import { useParams } from 'react-router-dom';
+import axios from "axios";
 
 const list = [
     {
@@ -25,18 +27,42 @@ const list = [
 ]
 
 function Products({basket, setBasket, total, setTotal}) {
+    const [productData, setProductData] = React.useState('');
 
-    return (
-        <>
-            <h2>The Products</h2>
+    React.useEffect(() => {
+        axios
+        .get(
+            `http://localhost:3100/products`, 
+        )
+        .then(response => {
+            console.log(response)
+            setProductData(response.data);
+        })
+        .catch(err => {
+            console.log(err)
+        });
 
-            <Product info={list[0]} basket={basket} setBasket={setBasket} total={total} setTotal={setTotal}/>
-            <Product info={list[1]} basket={basket} setBasket={setBasket} total={total} setTotal={setTotal}/>
-            <Product info={list[2]} basket={basket} setBasket={setBasket} total={total} setTotal={setTotal}/>
-            <Product info={list[3]} basket={basket} setBasket={setBasket} total={total} setTotal={setTotal}/>
-        </>
-    )
         
+    }, [setProductData])
+
+
+
+    if (productData !== '') {
+        return (
+            <>
+                <h2>The Products</h2>
+
+                <Product info={productData[0]} basket={basket} setBasket={setBasket} total={total} setTotal={setTotal}/>
+                <Product info={productData[1]} basket={basket} setBasket={setBasket} total={total} setTotal={setTotal}/>
+                <Product info={productData[2]} basket={basket} setBasket={setBasket} total={total} setTotal={setTotal}/>
+                <Product info={productData[3]} basket={basket} setBasket={setBasket} total={total} setTotal={setTotal}/>
+            </>
+        );  
+   } else {
+       return (
+           <></>
+       )
+   }
    
     
   
