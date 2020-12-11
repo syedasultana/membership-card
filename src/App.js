@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>An E-Commerce site</h1>
+      <h1 class="header">Will Baker's Shop</h1>
 
       
 

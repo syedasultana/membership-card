@@ -64,3 +64,24 @@
 .box-3 {
   flex: 1;
 }
+
+.pointsBalance {
+  width: 300px;
+  border: 15px solid green;
+  padding: 20px;
+  margin: 20px;
+}
+
+.checkout {
+  width: 300px;
+  border: 15px solid purple;
+  padding: 20px;
+  margin: 20px;
+}
+
+.header {
+  padding: 20px;
+  margin: 20px;
+}
+
+

@@ -11,9 +11,10 @@ function Product({info, basket, setBasket, total, setTotal}) {
 
             <button
                 onClick={() => {
-                    const updatedBasket = [...basket, info.name]
+                    const updatedBasket = [...basket, info.productname]
                     setBasket(updatedBasket); 
-                    const updatedTotal = [parseInt(total) + parseInt(info.price)]
+                    let price = parseInt(info.productprice);
+                    const updatedTotal = [parseInt(total) + price]
                     setTotal(updatedTotal)
                 }}
             >

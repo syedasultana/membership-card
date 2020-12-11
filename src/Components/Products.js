@@ -52,10 +52,38 @@ function Products({basket, setBasket, total, setTotal}) {
             <>
                 <h2>The Products</h2>
 
-                <Product info={productData[0]} basket={basket} setBasket={setBasket} total={total} setTotal={setTotal}/>
-                <Product info={productData[1]} basket={basket} setBasket={setBasket} total={total} setTotal={setTotal}/>
-                <Product info={productData[2]} basket={basket} setBasket={setBasket} total={total} setTotal={setTotal}/>
-                <Product info={productData[3]} basket={basket} setBasket={setBasket} total={total} setTotal={setTotal}/>
+                <table class="table table-hover">
+                    <tbody>
+                        <tr>
+                       
+                        <td>
+                            <Product info={productData[0]} basket={basket} setBasket={setBasket} total={total} setTotal={setTotal}/>
+                        </td>
+                        <td>
+                            <Product info={productData[1]} basket={basket} setBasket={setBasket} total={total} setTotal={setTotal}/>
+                        </td>
+                       
+                        </tr>
+                        <tr>
+                      
+                        <td>
+                            <Product info={productData[2]} basket={basket} setBasket={setBasket} total={total} setTotal={setTotal}/>
+                        </td>
+                        <td>
+                            <Product info={productData[3]} basket={basket} setBasket={setBasket} total={total} setTotal={setTotal}/>
+                        </td>
+                        
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+
+
+
+
+
+
             </>
         );  
    } else {

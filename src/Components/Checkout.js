@@ -11,15 +11,15 @@ function Checkout({basket, setBasket, total, pointsMoney, setPoints}) {
 
     if (paid) {
         return (
-            <>
+            <div class="checkout">
                 <h2>empty basket</h2>
-            </>
+            </div>
         )
     } else {
 
         return (
-            <>
-                <h2>Checkout: xyz</h2>
+            <div class="checkout">
+                <h2>Checkout</h2>
                 <h3>{basket}</h3>
 
                 <h3>Total: £{total}</h3>
@@ -53,7 +53,7 @@ function Checkout({basket, setBasket, total, pointsMoney, setPoints}) {
                 >
                     my points
                 </button>
-            </>
+            </div>
         )
         
     }
